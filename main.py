@@ -1,5 +1,5 @@
-from src2.Plotting.plots import plot_curs_dist, plot_curs_time, plot_cur_runtime
-from src2.Cur.cur_decompositions import leverage_cur, subspace_cur
+from src.Plotting.plots import plot_curs_dist, plot_curs_time, plot_cur_runtime
+from src.Cur.cur_decompositions import leverage_cur, subspace_cur
 from sklearn import datasets
 import pandas as pd
 import numpy as np
@@ -72,8 +72,8 @@ if __name__ == '__main__':
     user_avgs = evaluate_user_averages(R, item_avgs, beta_i, 0.14*2, 0.14*2, u_min, u_max,delta_r)
     private_R= differentially_private_input_perturbation(R,beta_i, 0.7*2,delta_r)
 
-    private_R=pd.DataFrame(R)
+    private_R=pd.DataFrame(private_R)
  
-    plot_curs_dist(private_R, 10, 13, 25, "./Figs2/original_ml_100k/")
+    plot_curs_dist(private_R, 10, 13, 25, "./Figs2/input_pertubation1/")
     
    
