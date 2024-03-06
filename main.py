@@ -76,4 +76,4 @@ if __name__ == '__main__':
  
     plot_curs_dist(private_R, 10, 13, 25, "./Figs2/input_pertubation1/")
     
-   
+   #
