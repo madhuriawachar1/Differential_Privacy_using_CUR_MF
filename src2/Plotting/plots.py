@@ -183,7 +183,7 @@ def plot_cur_runtime(df:pd.DataFrame, max_singular_vect_num:int, constant_search
         save_path + f"{data_name}_Runtime_Row.png")
     
     
-            
+       #_all _dual functions are used for 2 dataset comparison     
 def sample_from_leverage_cur_dual(original_df: pd.DataFrame, perturbed_df: pd.DataFrame, sing_vect_num: int, search_size: int, sample_size=50):
     '''Helper function to sample from the leverage cur decomposition for both original and perturbed datasets.'''
     # Sample from leverage_cur for original dataset
