@@ -16,6 +16,7 @@ def subspace_cur(df: pd.DataFrame, sing_vect_num: int, search_size=1)-> tuple[np
     col_matrix = df.loc[:,cols].to_numpy()
     row_matrix = df.loc[rows,:].to_numpy()
     u_matrix = np.linalg.pinv(col_matrix).dot(df).dot(np.linalg.pinv(row_matrix))
+    print( "col_matrix, row_matrix, u_matrix", col_matrix.shape,row_matrix.shape,u_matrix.shape)
     return (col_matrix, u_matrix, row_matrix,
     {"cur_dist": np.linalg.norm(df.to_numpy() - col_matrix.dot(u_matrix).dot(row_matrix), "fro"),"col_dist":col_distance, "row_dist":row_distance})
 
